@@ -1,1 +1,5 @@
 This repository contain scripts about wordress
+
+must have plugins : 
+Caching plugin : w3 total cache, wp super cache, wp fastest cache, wp rocket
+Security plugin : wordfence
