@@ -3,3 +3,21 @@ This repository contain scripts about wordress
 must have plugins : 
 Caching plugin : w3 total cache, wp super cache, wp fastest cache, wp rocket
 Security plugin : wordfence
+
+secure admin login using otp to admin ( my number ), dont show content to others except admin
+always use cdn for images and other resources , search free cdn, 
+security plugin for wordpress
+create a plugin for contact forms ( save in db also )
+always use smtp for emails
+create custom plugin or function for breadcrumbs
+
+disable big image threshold
+
+
+wordpress theme devlopment, wordpress plugin development, wordpress interal working structure
+
+
+
+tutsplus
+wpbeginner
+and other useful sites for wordpress tutorial
