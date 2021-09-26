@@ -1,0 +1,30 @@
+theme development
+plugin development
+REST API
+worpress walker menu class
+custom rewrite rules need to study in details.
+what is query_vars
+
+
+===========================================================================================================
+
+theme development guide / theme handbook : https://developer.wordpress.org/themes/getting-started/
+featured images : http://www.makeuseof.com/tag/complete-guide-featured-thumbnails-image-sizes-wordpress/
+
+
+pagination in wordpress admin for custom plugin
+http://www.onextrapixel.com/2009/06/22/how-to-add-pagination-into-list-of-records-or-wordpress-plugin/
+www.intechgrity.com/properly-add-pagination-to-your-wordpress-plugin/
+http://tareq.wedevs.com/2011/07/simple-pagination-system-in-your-wordpress-plugins/
+
+create a theme in wordpress for code collection 
+search / pagination / custom search / custom post type search / search paramters in custom query string
+woocommerce product 
+wrodpress : bulk meta data in wordpress, breadcrumb on product detail page according to category
+cache plugin complarison
+seo plugin comparision
+
+============
+
+In the default taxonomy "Category", en empty term is always redirect to the 404 not found page. But with the custom taxonomy this is not the case, An empty custom taxonomy term does not redirect to the 404 page, it show their template.
+in the same taxonomy two category can not have same name.

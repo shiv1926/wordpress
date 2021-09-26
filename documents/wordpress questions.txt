@@ -1,0 +1,36 @@
+how to use gutenburg editor see video.
+how to create common functions for all themes in wordpress
+
+===========================================================================
+what are hooks, how many types of hooks are available ?
+They enable plugin developers to “hook” into the WordPress workflow to change how it works without directly modifying the core code.
+WordPress has two primary types of hooks: action hooks and filter hooks. 
+The former enables you to execute a function at a certain point, and the latter enables you to manipulate the output passed through the hook.
+do_action
+add_action
+https://codex.wordpress.org/Plugin_API/Action_Reference : there are all api are showing.
+https://code.tutsplus.com/tutorials/mastering-wp_query-using-the-loop--cms-23031
+https://digwp.com/2011/05/loops/
+=========================================
+
+what the are the hooks and types of hooks
+do_action and add_action and add_filter 
+what are the custom fields.
+right the process of plugins developement and widget developement ?
+what the are template tags in wordpress ?
+difference between post and pages ?
+what is the theme support ?
+thumbnail setting in functions.php
+how to create shortcode ?
+reason to blank screen : never leave any blank space after last php end ( ?> ) tag and stat of first php start ( <?php ) tag.
+how to write ajax in wordpress
+nonce in wordpess
+what is the difference between wp_query and query_post
+user roles and responsibilties
+child theme
+
+========================================
+
+good tips : 
+stop using query_posts(). See the codex about this function to see why you shouldn't use it in themes or plugins. Anyway, if you are in a some weird situation where you have not option and you need to use query_posts(), you should run wp_reset_query() after the loop. You must know that you are using the global $wp_query, that contains the original query made by WordPress, and then query_post that alter the global $wp_query variable, you end up with unexpected results. Additionally, you are using a deprecated parameter showposts, replaced by posts_per_page.
+
