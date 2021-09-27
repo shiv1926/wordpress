@@ -54,36 +54,7 @@ jQuery(document).ready(function(){
                 console.log(error);
             }
         });
-    });
-
-    jQuery("#add_state").click(function () {
-        var data_state = {
-            'action': 'add_state',
-            'country_name': jQuery("#country_name").val(),
-            'state_name': jQuery("#state_name").val(),
-        };
-
-        jQuery.ajax({
-            url: ajaxurl,
-            type: 'POST',
-            data: data_state,
-            async: true,
-            dataType: "json",
-            success: function (response) {
-                if (response.status == 'error') {
-                    jQuery(response.err_obj).each(function (index, value) {
-                        console.log(response.err_obj);
-                        console.log(index + " : " + value);
-                        jQuery("#" + value.field).html('<p class="error_message">' + value.message + '</p>');
-                    })
-                } else {
-                    window.location.href = 'admin.php?page=states&msg=success';
-                }
-            },
-            error: function (error) {
-                console.log(error);
-            }
-        });
+        return false;
     });
 
     jQuery("#add_city").click(function () {
