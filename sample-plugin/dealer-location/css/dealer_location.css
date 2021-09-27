@@ -1,0 +1,8 @@
+.horizontal_form { display: flex; align-items: flex-end; }
+.horizontal_form .fields { flex: 0 0 auto; width: calc(33.33% - 20px); padding: 0 10px; }
+.horizontal_form .fields input, select { width: 100%; }
+.horizontal_form .fields .add_location { width: 140px; }
+.horizontal_form.cities .fields { width: calc(25% - 20px); }
+.error_message { color: red!important; font-size: 12px!important; font-weight: 600; margin: 0 0 0 0!important; padding: 0 0 0 0!important; }
+.dealer_box { padding: 0 30px 0 0; }
+.dealer_box .wp-list-table { margin: 30px 0 0 0; }

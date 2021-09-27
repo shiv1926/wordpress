@@ -21,3 +21,6 @@ wordpress theme devlopment, wordpress plugin development, wordpress interal work
 tutsplus
 wpbeginner
 and other useful sites for wordpress tutorial
+
+
+how to insert data in database tables, and custom tables
