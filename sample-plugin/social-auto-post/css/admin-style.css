@@ -1,0 +1,5 @@
+<style>
+.postpaging table {background-color: #F9F9F9;border:1px solid #DFDFDF; width:98%; margin-bottom:25px;}
+.postpaging table td {font-size: 12px;  padding: 5px 7px 5px; vertical-align: top; color:#555555; border-bottom:1px solid #DFDFDF;}
+.postpaging table tr:last-child td { border-bottom:0px;}  
+</style>
