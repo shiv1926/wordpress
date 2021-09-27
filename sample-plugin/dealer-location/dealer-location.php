@@ -30,7 +30,7 @@ function dealer_location_activation() {
       `state_name` varchar(255) NOT NULL,
       `country_id` int(11) NOT NULL,
       PRIMARY KEY (`state_id`)
-    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;'
+    ) ENGINE=MyISAM DEFAULT CHARSET=latin1;';
     $wpdb->query($sql3);
 }
 register_activation_hook(__FILE__, 'dealer_location_activation');
