@@ -28,3 +28,7 @@ seo plugin comparision
 
 In the default taxonomy "Category", en empty term is always redirect to the 404 not found page. But with the custom taxonomy this is not the case, An empty custom taxonomy term does not redirect to the 404 page, it show their template.
 in the same taxonomy two category can not have same name.
+==========================================
+adding meta boxes in admin panel, and validation them, same them
+https://www.smashingmagazine.com/2011/10/create-custom-post-meta-boxes-wordpress/
+https://metabox.io/how-to-create-custom-meta-boxes-custom-fields-in-wordpress/

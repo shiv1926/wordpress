@@ -89,8 +89,7 @@ jQuery(document).ready(function(){
     });
 });
 
-function remove_country(country_id)
-{
+function remove_country(country_id) {
     if(confirm('Remove country and their states and cities ?')) {
         window.location.href = 'admin.php?page=countries&remove=' + country_id;
     } else {
@@ -106,14 +105,12 @@ function remove_state(state_id) {
     }
 }
 
-function remove_city(city_id)
-{
+function remove_city(city_id) {
     if (confirm('Remove city ?')) {
         window.location.href = 'admin.php?page=cities&remove=' + city_id;
     } else {
         return false;
     }
-
 }
 
 function get_states_by_country(option)
@@ -129,11 +126,29 @@ function get_states_by_country(option)
         async: true,
         dataType: "json",
         success: function (response) {
-            jQuery("#state_name")
-                .find('option')
-                .remove()
-                .end()
-                .append(response.opt_list);
+            jQuery("#state_name").find('option').remove().end().append(response.opt_list);
+            jQuery("#city_name").find('option').remove().end().append('<option value="">Select City</option');
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+function get_cities_by_state(option)
+{
+    var get_cities_by_state = {
+        'action': 'get_cities_by_state',
+        'state_id': option.value
+    }
+    jQuery.ajax({
+        url: ajaxurl,
+        type: 'POST',
+        data: get_cities_by_state,
+        async: true,
+        dataType: "json",
+        success: function (response) {
+            jQuery("#city_name").find('option').remove().end().append(response.opt_list);
         },
         error: function (error) {
             console.log(error);
