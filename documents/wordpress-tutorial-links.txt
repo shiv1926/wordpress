@@ -32,3 +32,9 @@ in the same taxonomy two category can not have same name.
 adding meta boxes in admin panel, and validation them, same them
 https://www.smashingmagazine.com/2011/10/create-custom-post-meta-boxes-wordpress/
 https://metabox.io/how-to-create-custom-meta-boxes-custom-fields-in-wordpress/
+
+wordpress tutorial for tinymce editor from admin 
+https://www.gavick.com/blog/wordpress-tinymce-custom-buttons
+http://www.tinymce.com/wiki.php/TinyMCE3x:Buttons/controls
+http://www.wpexplorer.com/wordpress-tinymce-tweaks/
+http://code.tutsplus.com/tutorials/guide-to-creating-your-own-wordpress-editor-buttons--wp-30182
