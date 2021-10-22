@@ -21,3 +21,5 @@
 	</li>
 </ul>
 <?php include('footer.php'); ?>
+
+wp-admin/admin-ajax.php returns 0
