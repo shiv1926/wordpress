@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+<body>
+
+<?php
+include_once("../wp-load.php");
+$args = array(
+	'taxonomy'      => 'state',
+	'hide_empty'       => true,
+);
+$posts_array = get_categories($args);
+foreach ($posts_array as $key => $value) 
+{
+	echo get_category_link($value->term_id);
+	echo "<br>";
+}
+?>
+</body>
+</html>
