@@ -14,12 +14,17 @@
 		</ul>
 	</li>
 	<li>
-		<h4>Wordpress Performance</h4>
+		<h4>Wordpress Performance and optimization</h4>
 		<ul>
 			<li><a href="<?php echo wp_url('wordpress-performance/introduction.php'); ?>">Introduction</a></li>
 		</ul>
 	</li>
+	<li>
+		<h4>Wordpress Security</h4>
+		<ul>
+			<li><a href="<?php echo wp_url('wordpress-security/introduction.php'); ?>">Introduction</a></li>
+		</ul>
+		https://onlinemediamasters.com/slow-wordpress-site/
+	</li>
 </ul>
 <?php include('footer.php'); ?>
-
-wp-admin/admin-ajax.php returns 0
