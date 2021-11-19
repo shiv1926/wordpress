@@ -25,6 +25,15 @@
 			<li><a href="<?php echo wp_url('wordpress-security/introduction.php'); ?>">Introduction</a></li>
 		</ul>
 		https://onlinemediamasters.com/slow-wordpress-site/
+
+		contact form 7 redirect https://www.rocketclicks.com/client-education/contact-form-7-thank-page-redirects/
 	</li>
 </ul>
+
 <?php include('footer.php'); ?>
+
+<div>for speed : </div>
+<div>ManageWP - Worker</div>
+<div>W3Speedster</div>
+<div>Comet Cache</div>
+<div>https://w3speedup.com/how-to-improve-fcp-first-contentful-paint/</div>
