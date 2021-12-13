@@ -2,7 +2,7 @@
 function wp_url($file='')
 {
     if($_SERVER['HTTP_HOST']=='shiv-pc') {
-        return 'http://shiv-pc/all_tutorials/javascript/es6/'.$file;
+        return 'http://shiv-pc/all_tutorials/wordpress/'.$file;
     } else {
         return 'http://localhost/all_tutorial/wordpress/'.$file;
     }
