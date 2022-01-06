@@ -50,7 +50,7 @@
     echo '<tr>';
     echo '<th class="manage-column">State Name</th>';
     echo '<th class="manage-column">Country Name</th>';
-    echo '<th class="manage-column">Action</th>';
+    // echo '<th class="manage-column">Action</th>';
     echo '</tr>';
     echo '</thead>';
     echo '<tbody>';
@@ -59,7 +59,7 @@
         echo '<tr>';
         echo '<td>'.$result->state_name.'</td>';
         echo '<td>'.get_country_name($result->country_id).'</td>';
-        echo '<td><button class="remove" onclick="remove_state('.$result->state_id.');">Remove</button></td>';
+        // echo '<td><button class="remove" onclick="remove_state('.$result->state_id.');">Remove</button></td>';
         echo '</tr>';
     }
     echo '</table>';

@@ -54,17 +54,23 @@
     echo '<table class="wp-list-table widefat fixed striped table-view-list posts">';
     echo '<thead>';
     echo '<tr>';
+    echo '<th class="manage-column">S. No.</th>';
     echo '<th class="manage-column">City Name</th>';
+    echo '<th class="manage-column">State Name</th>';
     echo '<th class="manage-column">Action</th>';
     echo '</tr>';
     echo '</thead>';
     echo '<tbody>';
+    $count = 1;
     foreach( $results as $result)
     {
         echo '<tr>';
+        echo '<td>'.$count.'</td>';
         echo '<td>'.$result->city_name.'</td>';
+        echo '<td>'.get_state_name($result->state_id).'</td>';
         echo '<td><button class="remove" onclick="remove_city('.$result->city_id.');">Remove</button></td>';
         echo '</tr>';
+        $count++;
     }
     echo '</table>';
     echo '</tbody>';

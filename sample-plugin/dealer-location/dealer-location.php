@@ -99,6 +99,14 @@ function get_country_name($cid)
     return $results[0]->country_name;
 }
 
+function get_state_name($sid)
+{
+    global $wpdb;
+    $sql = "SELECT * FROM ".$wpdb->prefix."dealer_states where state_id='".$sid."' limit 0,1 ";
+    $results = $wpdb->get_results($sql);
+    return $results[0]->state_name;
+}
+
 add_action('wp_ajax_add_country','add_country');
 add_action('wp_ajax_nopriv_add_country','add_country');
 function add_country()
@@ -251,16 +259,13 @@ function get_states_by_country()
     $sql = "SELECT * FROM ".$wpdb->prefix."dealer_states where country_id='".$country_id."' order by state_name asc";
     $results = $wpdb->get_results($sql);
     $option = '';
+    $option.='<option value="">Select State</option>';
     if(count($results) > 0) 
     {
         foreach( $results as $result)
         {
             $option.='<option value="'.$result->state_id.'">'.$result->state_name.'</option>';
         }
-    }
-    else
-    {
-        $option.='<option value="">Select State</option>';
     }
     $return['status'] = 'success';
     $return['opt_list'] = $option;
@@ -278,16 +283,13 @@ function get_cities_by_state()
     $sql = "SELECT * FROM ".$wpdb->prefix."dealer_cities where state_id='".$state_id."' order by city_name asc";
     $results = $wpdb->get_results($sql);
     $option = '';
+    $option.='<option value="">Select City</option>';
     if(count($results) > 0) 
     {
         foreach( $results as $result)
         {
             $option.='<option value="'.$result->city_id.'">'.$result->city_name.'</option>';
         }
-    }
-    else
-    {
-        $option.='<option value="">Select City</option>';
     }
     $return['status'] = 'success';
     $return['opt_list'] = $option;
@@ -301,40 +303,82 @@ function add_dealer_metaboxes() {
         'wp_dealer_location',
         'Dealer Location',
         'wp_dealer_location',
-        'dealer',
+        'dealers',
         'normal',
         'default'
     );
 }
 
-function wp_dealer_location() {
+function wp_dealer_location($post) {
     $return='';
     global $wpdb;
+
+    $get_dealer_country_id = get_post_meta($post->ID, 'dealer_country_id', true);
+    $get_dealer_state_id = get_post_meta($post->ID, 'dealer_state_id', true);
+    $get_dealer_city_id = get_post_meta($post->ID, 'dealer_city_id', true);
+
     $sql = "SELECT * FROM ".$wpdb->prefix."dealer_countries order by country_name asc ";
     $results = $wpdb->get_results($sql);
     $option = '';
     foreach( $results as $result)
     {
-        $option.='<option value="'.$result->country_id.'">'.$result->country_name.'</option>';
+        if($get_dealer_country_id==$result->country_id) {
+            $option.='<option value="'.$result->country_id.'" selected="selected">'.$result->country_name.'</option>';
+        } else {
+            $option.='<option value="'.$result->country_id.'">'.$result->country_name.'</option>';
+        }
     }
+
+    if(isset($get_dealer_state_id) && $get_dealer_state_id!='')
+    {
+        $state_sql = "SELECT * FROM ".$wpdb->prefix."dealer_states order by state_name asc ";
+        $state_results = $wpdb->get_results($state_sql);
+        $state_option = '';
+        foreach($state_results as $state_result)
+        {
+            if($get_dealer_state_id==$state_result->state_id) {
+                $state_option.='<option value="'.$state_result->state_id.'" selected="selected">'.$state_result->state_name.'</option>';
+            } else {
+                $state_option.='<option value="'.$state_result->state_id.'">'.$state_result->state_name.'</option>';
+            }
+        }
+    }
+
+    if(isset($get_dealer_city_id) && $get_dealer_city_id!='')
+    {
+        $city_sql = "SELECT * FROM ".$wpdb->prefix."dealer_cities order by city_name asc ";
+        $city_results = $wpdb->get_results($city_sql);
+        $city_option = '';
+        foreach($city_results as $city_result)
+        {
+            if($get_dealer_city_id==$city_result->city_id) {
+                $city_option.='<option value="'.$city_result->city_id.'" selected="selected">'.$city_result->city_name.'</option>';
+            } else {
+                $city_option.='<option value="'.$city_result->city_id.'">'.$city_result->city_name.'</option>';
+            }
+        }
+    }
+
     $return.='<div class="horizontal_form choose_location">';
     $return.='<div class="fields">';
     $return.='<label for="parent">Country</label>';
-    $return.='<select name="country_name" id="country_name" onclick="get_states_by_country(this);" class="required">';
+    $return.='<select name="country_name" id="country_name" onchange="get_states_by_country(this);" class="required">';
     $return.='<option value="">Select Country</option>';
     $return.=$option;
     $return.='</select>';
     $return.='</div>';
     $return.='<div class="fields">';
     $return.='<label for="parent">State</label>';
-    $return.='<select name="state_name" id="state_name" onclick="get_cities_by_state(this);" class="required">';
+    $return.='<select name="state_name" id="state_name" onchange="get_cities_by_state(this);" class="required">';
     $return.='<option value="">Select State</option>';
+    $return.=$state_option;
     $return.='</select>';
     $return.='</div>';
     $return.='<div class="fields">';
     $return.='<label for="parent">City</label>';
     $return.='<select name="city_name" id="city_name" class="required">';
     $return.='<option value="">Select City</option>';
+    $return.=$city_option;
     $return.='</select>';
     $return.='</div>';
     $return.='</div>';
