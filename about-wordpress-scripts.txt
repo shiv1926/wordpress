@@ -10,17 +10,11 @@ security plugin for wordpress
 create a plugin for contact forms ( save in db also )
 always use smtp for emails
 create custom plugin or function for breadcrumbs
-
 disable big image threshold
-
-
 wordpress theme devlopment, wordpress plugin development, wordpress interal working structure
-
-
-
 tutsplus
 wpbeginner
 and other useful sites for wordpress tutorial
 
-
 how to insert data in database tables, and custom tables
+https://developer.wordpress.org/ : this link contain the handbook for all topics, wordpress handbooks are always easy to understand

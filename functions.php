@@ -1,4 +1,13 @@
 <?php 
+function include_path()
+{
+    if($_SERVER['HTTP_HOST']=='shiv-pc') {
+        return 'E://xampp/htdocs/all_tutorials/wordpress';
+    } else {
+        return '';
+    }
+}
+
 function wp_url($file='')
 {
     if($_SERVER['HTTP_HOST']=='shiv-pc') {
