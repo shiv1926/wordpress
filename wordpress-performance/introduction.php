@@ -27,3 +27,5 @@ https://onlinemediamasters.com/wp-rocket-settings/
 https://onlinemediamasters.com/wp-fastest-cache-settings/
 https://onlinemediamasters.com/w3-total-cache-settings/
 https://onlinemediamasters.com/wp-super-cache-settings/
+
+https://www.elegantthemes.com/blog/tips-tricks/how-to-minify-your-websites-css-html-javascript
