@@ -34,3 +34,18 @@ child theme
 good tips : 
 stop using query_posts(). See the codex about this function to see why you shouldn't use it in themes or plugins. Anyway, if you are in a some weird situation where you have not option and you need to use query_posts(), you should run wp_reset_query() after the loop. You must know that you are using the global $wp_query, that contains the original query made by WordPress, and then query_post that alter the global $wp_query variable, you end up with unexpected results. Additionally, you are using a deprecated parameter showposts, replaced by posts_per_page.
 
+================ wordpress user registration section =================
+fellowtuts.com/wordpress/wordpress-ajax-login-and-register-without-a-plugin/
+http://www.sutanaryan.com/custom-user-registration-signup-using-ajax-wordpress/
+
+registration without ajax : 
+http://code.tutsplus.com/tutorials/creating-a-custom-wordpress-registration-form-plugin--cms-20968
+https://www.bobz.co/custom-ajax-wordpress-user-registration-form/
+http://sharethingz.com/wordpress/custom-user-registration-in-wordpress-using-ajax/
+https://pippinsplugins.com/creating-custom-front-end-registration-and-login-forms/
+
+google this :
+custom registration code using ajax worpdress
+
+how to add extra fields in wordpress registration form: 
+http://sharethingz.com/wordpress/add-fields-to-wordpress-registration-form/

@@ -42,6 +42,12 @@
 			<li>https://w3speedup.com/how-to-improve-fcp-first-contentful-paint/</li>
 		</ul>
 	</li>
+	<li>
+		<h4>create table in admin interface</h4>
+		<div>https://www.smashingmagazine.com/2011/11/native-admin-tables-wordpress/</div>
+		<div>https://www.vijayan.in/how-to-create-custom-table-list-in-wordpress-admin-page/</div>
+		<div>https://www.wpbeginner.com/wp-tutorials/how-to-add-indexnow-in-wordpress-to-speed-up-seo-results/ : this is indexNow new property, it is very important for SEO</div>
+	</li>
 </ul>
 
 <?php include('footer.php'); ?>

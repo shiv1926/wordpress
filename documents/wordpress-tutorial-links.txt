@@ -38,3 +38,10 @@ https://www.gavick.com/blog/wordpress-tinymce-custom-buttons
 http://www.tinymce.com/wiki.php/TinyMCE3x:Buttons/controls
 http://www.wpexplorer.com/wordpress-tinymce-tweaks/
 http://code.tutsplus.com/tutorials/guide-to-creating-your-own-wordpress-editor-buttons--wp-30182
+
+===========
+
+https://jetpack.com/support/site-accelerator/?aff=13782
+https://themeisle.com/blog/wordpress-image-optimizer-plugins-compared/?gclid=EAIaIQobChMIiuT7sfKk9gIVxQ0rCh2vpAFFEAAYAiAAEgLImvD_BwE#ShortPixel
+https://blog.hubspot.com/website/best-wordpress-image-optimization-plugins
+https://wpbuffs.com/speed-up-image-loading/
