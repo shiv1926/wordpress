@@ -23,7 +23,7 @@ function refrences($links)
     $return.='<h4>Refrences</h4>';
     foreach($links as $link)
     {
-        $return.='<div>'.$link.'</div>';
+        $return.='<div><a href="'.$link[0].'">'.$link['0'].' : '.$link['1'].'</a></div>';
     }
     return $return;
 }

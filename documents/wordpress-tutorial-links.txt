@@ -5,6 +5,7 @@ worpress walker menu class
 custom rewrite rules need to study in details.
 what is query_vars
 
+very good link for adding columns in admin panel : https://www.smashingmagazine.com/2017/12/customizing-admin-columns-wordpress/
 
 ===========================================================================================================
 

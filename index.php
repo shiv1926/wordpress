@@ -14,19 +14,27 @@
 		</ul>
 	</li>
 	<li>
+		<h4>USers</h4>
+		<ul>
+			<li><a href="<?php echo wp_url('https://developer.wordpress.org/reference/classes/wp_user_query'); ?>">User class</a></li>
+		</ul>
+	</li>
+	<li>
 		<h4>Wordpress Performance and optimization</h4>
 		<ul>
 			<li><a href="<?php echo wp_url('wordpress-performance/introduction.php'); ?>">Introduction</a></li>
+			<li><a href="<?php echo wp_url('custom-crud-operations.php'); ?>">Custom Crud Operations</a></li>
+			<li><a href="<?php echo wp_url('sanitizing.php'); ?>">Securing (sanitizing) Input</a></li>
+			<li><a href="<?php echo wp_url('securing-output.php'); ?>">Securing Output</a></li>
 		</ul>
 	</li>
 	<li>
 		<h4>Wordpress Security</h4>
 		<ul>
 			<li><a href="<?php echo wp_url('wordpress-security/introduction.php'); ?>">Introduction</a></li>
+			<li>https://onlinemediamasters.com/slow-wordpress-site/</li>
+			<li>contact form 7 redirect https://www.rocketclicks.com/client-education/contact-form-7-thank-page-redirects/</li>
 		</ul>
-		https://onlinemediamasters.com/slow-wordpress-site/
-
-		contact form 7 redirect https://www.rocketclicks.com/client-education/contact-form-7-thank-page-redirects/
 	</li>
 	<li>
 		<ul>
